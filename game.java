@@ -8,7 +8,7 @@ import java.awt.event.KeyListener;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
-public class game extends JComponent implements Runnable, KeyListener {
+public class denckInvaders extends JComponent implements Runnable, KeyListener {
 	
 	private static final long serialVersionUID = 1L;
 	static ArrayList<denck> dencks = new ArrayList<denck>();
@@ -22,7 +22,7 @@ public class game extends JComponent implements Runnable, KeyListener {
 	public static int lives, score, playerFreq, currPlayer, denckFreq, currDenck;
 	public static String livesDisplay;
 
-	public game(){
+	public denckInvaders(){
 		Thread t = new Thread(this);
 		t.start();
 		addKeyListener(this);
@@ -48,7 +48,7 @@ public class game extends JComponent implements Runnable, KeyListener {
 		frameHeight = 800;
 		frame.setSize(frameWidth, frameHeight);
 		frame.setVisible(true);
-		frame.add(new game());
+		frame.add(new denckInvaders());
 		frame.getContentPane().setBackground(Color.black);
 		int numDencksInCollumn = 3, numDenckCollumns = 5, spacing = 10;
 		for(int i = 0; i < numDencksInCollumn * numDenckCollumns; i++){
