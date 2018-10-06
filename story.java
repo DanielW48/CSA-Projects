@@ -5,12 +5,12 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 import java.awt.Graphics;
 
-public class Story extends JComponent implements MouseListener {
+public class story extends JComponent implements MouseListener {
 //	public boolean angeredOldLady;
 	public static void main(String[] args) {
 		JFrame frame = new JFrame(nameOfApp);
 		frame.getDefaultCloseOperation();
-		frame.add(new Story());
+		frame.add(new story());
 		frame.setSize(600, 600);
 		frame.setVisible(true);
 		frame.getContentPane().setBackground(Color.lightGray);
@@ -30,7 +30,7 @@ public class Story extends JComponent implements MouseListener {
 	int[] lotteryDisplay = new int[3];
 	int[] lotteryInput = new int[3];
 	
-	public Story(){
+	public story(){
 		addMouseListener(this);
 	}
 	public void paint(Graphics g){
